@@ -1,0 +1,6 @@
+<div [hidden]="isVisible()" class="popup">
+  <button class="btn" (click)="onPopUpClose()">x</button>
+  <h2>Name {{ mediaPopUp? mediaPopUp.name : "" }}</h2>
+  <h2>Whatced On {{ mediaPopUp? mediaPopUp.watchedOn : "" }}</h2>
+  <h2>Category On {{ mediaPopUp? mediaPopUp.category : "" }}</h2>
+</div>
