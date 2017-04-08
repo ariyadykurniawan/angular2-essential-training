@@ -1,11 +1,6 @@
 <div [hidden]="isVisible()" class="popup">
   <div class="content">
       <span class="close" (click)="onPopUpClose()">&times;</span>
-      <ul>
-        <li *ngFor="let pict of picts">
-            <img src={{ mediaPopUp?.pict }}>
-        </li>
-      </ul>
       <h2>Name {{ mediaPopUp? mediaPopUp.name : "" }}</h2>
       <h2>Whatced On {{ mediaPopUp? mediaPopUp.watchedOn : "" }}</h2>
       <h2>Category On {{ mediaPopUp? mediaPopUp.category : "" }}</h2>
