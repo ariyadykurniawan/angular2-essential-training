@@ -6,6 +6,9 @@ import { MediaItemComponent } from './media-item.component';
 import { MediaItemListComponent } from './media-item-list.component';
 import { FavoriteDirective } from './favorite.directive';
 
+import {PopUpItemComponent} from './popUp-item.component';
+import {ImgItemComponent} from './img-item.component';
+
 @NgModule({
   imports: [
     BrowserModule
@@ -14,7 +17,9 @@ import { FavoriteDirective } from './favorite.directive';
     AppComponent,
     MediaItemComponent,
     MediaItemListComponent,
-    FavoriteDirective
+    FavoriteDirective,
+    PopUpItemComponent,
+    ImgItemComponent
   ],
   bootstrap: [
     AppComponent

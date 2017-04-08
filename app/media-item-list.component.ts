@@ -17,7 +17,15 @@ export class MediaItemListComponent {
       category: "Science Fiction",
       year: 2010,
       watchedOn: 1294166565384,
-      isFavorite: false
+      isFavorite: false,
+      imgs:[{
+          src:'./media/01.png',
+          selected: true
+        },
+        {
+          src:'./media/02.png',
+          selected: false
+        }]
     },
     {
       id: 2,
@@ -26,7 +34,15 @@ export class MediaItemListComponent {
       category: "Comedy",
       year: 2015,
       watchedOn: null,
-      isFavorite: true
+      isFavorite: true,
+      imgs:[{
+          src:'./media/01.png',
+          selected: true
+        },
+        {
+          src:'./media/02.png',
+          selected: false
+        }]
     }, {
       id: 3,
       name: "The Redemption",
@@ -34,7 +50,15 @@ export class MediaItemListComponent {
       category: "Action",
       year: 2016,
       watchedOn: null,
-      isFavorite: false
+      isFavorite: false,
+      imgs:[{
+          src:'./media/01.png',
+          selected: true
+        },
+        {
+          src:'./media/02.png',
+          selected: false
+        }]
     }, {
       id: 4,
       name: "Hoopers",
@@ -42,7 +66,15 @@ export class MediaItemListComponent {
       category: "Drama",
       year: null,
       watchedOn: null,
-      isFavorite: true
+      isFavorite: true,
+      imgs:[{
+          src:'./media/01.png',
+          selected: true
+        },
+        {
+          src:'./media/02.png',
+          selected: false
+        }]
     }, {
       id: 5,
       name: "Happy Joe: Cheery Road",
@@ -50,7 +82,15 @@ export class MediaItemListComponent {
       category: "Action",
       year: 2015,
       watchedOn: 1457166565384,
-      isFavorite: false
+      isFavorite: false,
+      imgs:[{
+          src:'./media/01.png',
+          selected: true
+        },
+        {
+          src:'./media/02.png',
+          selected: false
+        }]
     }
   ];
 }
