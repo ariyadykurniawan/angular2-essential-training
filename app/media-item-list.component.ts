@@ -9,6 +9,16 @@ export class MediaItemListComponent {
 
   onMediaItemDelete(mediaItem) { }
 
+  popUp = null;
+
+  onMediaItemPreview(mediaItem){
+    this.popUp = mediaItem;
+  }
+
+  onPopUpClose(mediaItem){
+    this.popUp = null;
+  }
+
   mediaItems = [
     {
       id: 1,
