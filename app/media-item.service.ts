@@ -8,16 +8,12 @@ export class MediaItemService {
 
   get(medium) {
     let searchParams = new URLSearchParams();
-    searchParams.append('medium', medium);
-    return this.http.get('mediaitems', { search: searchParams })
-      .map(response => {
-        return response.json().mediaItems;
-      });
-  }
+    if(medium === "true"){
+      searchParams.append('newRelease', medium);
+    }else{
+      searchParams.append('medium', medium);
+    }
 
-  getByRelease(newrelease){
-    let searchParams = new URLSearchParams();
-    searchParams.append('newRelease', newrelease);
     return this.http.get('mediaitems', { search: searchParams })
       .map(response => {
         return response.json().mediaItems;

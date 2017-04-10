@@ -6,6 +6,7 @@ import { SongItemListComponent } from './song-item-list.component';
 const appRoutes: Routes = [
   { path: 'add', component: SongItemFormComponent },
   { path: ':medium', component: SongItemListComponent },
+  { path: ':newRelease', component: SongItemListComponent },
   { path: '', pathMatch: 'full', redirectTo: 'all' }
 ];
 

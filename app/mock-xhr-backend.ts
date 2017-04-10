@@ -12,18 +12,28 @@ export class MockXHRBackend {
       var responseOptions;
       switch (request.method) {
         case RequestMethod.Get:
+         console.log(request.url);
           if (request.url.indexOf('mediaitems?medium=') >= 0 || request.url === 'mediaitems') {
             var medium;
+            var newRelease;
             if (request.url.indexOf('?') >= 0) {
               medium = request.url.split('=')[1];
-              if (medium === 'undefined') medium = '';
+              // if (medium === 'undefined') medium = '';
+              if(medium === 'undefined'){
+                medium = '';
+              }else if(medium === 'new'){
+                newRelease = true;
+              }
             }
             var mediaItems;
             if (medium) {
               mediaItems = this._mediaItems.filter(mediaItem => mediaItem.medium === medium);
+            }else if(newRelease){
+              mediaItems = this._mediaItems.filter(mediaItem => mediaItem.newRelease === newRelease);
             } else {
               mediaItems = this._mediaItems;
             }
+
             responseOptions = new ResponseOptions({
               body: { mediaItems: JSON.parse(JSON.stringify(mediaItems)) },
               status: 200
