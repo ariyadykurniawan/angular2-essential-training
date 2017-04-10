@@ -14,6 +14,15 @@ export class MediaItemService {
         return response.json().mediaItems;
       });
   }
+
+  getByRelease(newrelease){
+    let searchParams = new URLSearchParams();
+    searchParams.append('newRelease', newrelease);
+    return this.http.get('mediaitems', { search: searchParams })
+      .map(response => {
+        return response.json().mediaItems;
+      });
+  }
   
   add(mediaItem) {
     return this.http.post('mediaitems', mediaItem)

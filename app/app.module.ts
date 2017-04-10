@@ -5,14 +5,15 @@ import { HttpModule, XHRBackend } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MediaItemComponent } from './media-item.component';
-import { MediaItemListComponent } from './media-item-list.component';
-import { FavoriteDirective } from './favorite.directive';
+import { SongItemListComponent } from './song-item-list.component';
+import { NewReleaseDirective } from './newrelease.directive';
 import { CategoryListPipe } from './category-list.pipe';
-import { MediaItemFormComponent } from './media-item-form.component';
+import { SongItemFormComponent } from './song-item-form.component';
 import { MediaItemService } from './media-item.service';
 import { lookupListToken, lookupLists } from './providers';
 import { MockXHRBackend } from './mock-xhr-backend';
 import { routing } from './app.routing';
+import { PopUpItemComponent } from './popup-item.component';
 
 @NgModule({
   imports: [
@@ -24,10 +25,11 @@ import { routing } from './app.routing';
   declarations: [
     AppComponent,
     MediaItemComponent,
-    MediaItemListComponent,
-    FavoriteDirective,
+    SongItemListComponent,
+    NewReleaseDirective,
     CategoryListPipe,
-    MediaItemFormComponent
+    SongItemFormComponent,
+    PopUpItemComponent
   ],
   providers: [
     MediaItemService,

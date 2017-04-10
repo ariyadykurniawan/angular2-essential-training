@@ -1,0 +1,66 @@
+<header>
+  <h2>Add Song to List</h2>
+</header>
+<form class="form-horizontal"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit(form.value)">
+  <div class="form-group">
+    <label for="artist" class="control-label col-sm-2" >Artis</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="artist" id="artist" formControlName="artist">
+      <div *ngIf="form.controls.artist.errors?.pattern">
+        <span class="label label-danger">Artis Name has invalid characters</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="title" class="control-label col-sm-2" >Title</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="title" id="title" formControlName="title">
+      <div *ngIf="form.controls.title.errors?.pattern" class="error">
+        Title has invalid characters
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="title" class="control-label col-sm-2" >Album</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="album" id="album" formControlName="album">
+      <div *ngIf="form.controls.album.errors?.pattern" class="error">
+        Title has invalid characters
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="medium" class="control-label col-sm-2" >Genre</label>
+    <div class="col-sm-10">
+        <select name="medium" class="form-control" id="medium" formControlName="medium">
+          <option *ngFor="let medium of lookupLists.mediums" value="{{medium}}">{{medium}}</option>
+        </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="title" class="control-label col-sm-2" >Lyrics</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" rows="5" id="lyrics" name="lyrics" formControlName="lyrics"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="year" class="control-label col-sm-2">Time Release</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="timeRelease" id="timeRelease" formControlName="timeRelease">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="year" class="control-label col-sm-2">New Release</label>
+    <div class="col-sm-10">
+      <label class="radio-inline"><input type="radio" name="newRelease" value="true" formControlName="newRelease">Yes</label>
+      <label class="radio-inline"><input type="radio" name="newRelease" value="false" formControlName="newRelease">No</label>
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default" [disabled]="!form.valid">Save</button>
+    </div>
+  </div>
+</form>

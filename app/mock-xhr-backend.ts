@@ -74,45 +74,58 @@ export class MockXHRBackend {
   _mediaItems = [
     {
       id: 1,
-      name: "Firebug",
-      medium: "Series",
-      category: "Science Fiction",
-      year: 2010,
-      watchedOn: 1294166565384,
-      isFavorite: false
+      title: "Kali Kedua",
+      artist: "Raisa",
+      album: "Handmade",
+      medium: "Pop",
+      timeRelease:"2016-02-05",
+      newRelease:false,
+      lyrics: `Jika wangimu saja bisa
+                Memindahkan duniaku
+                Maka cintamu pasti bisa
+                Mengubah jalan hidupku
+                Cukup sekali saja
+                Aku pernah merasa
+                Betapa menyiksa kehilanganmu
+                Kau tak terganti
+                Kau yang slalu kunanti
+                Takkan kulepas lagi
+                Pegang tanganku
+                Bersama jatuh cinta
+                Kali kedua pada yang sama
+                Jika senyummu saja bisa
+                Mencuri detak jantungku
+                Maka pelukkan mu yang bisa
+                Menyapu seluruh hatiku
+                Cukup sekali saja
+                Aku pernah merasa
+                Betapa menyiksa kehilanganmu
+                Kau tak terganti
+                Kau yang slalu kunanti
+                Takkan kulepas lagi
+                Pegang tanganku
+                Bersama jatuh cinta
+                Kali kedua pada yang sama
+                (Satukan hati, tanpa peduli)
+                Kedua kali kita bersama lagi
+                Pegang tanganku
+                Bersama jatuh cinta
+                Kali kedua pada yang sama
+                Sama indahnya
+                Pegang tanganku
+                Bersama jatuh cinta
+                Kali kedua pada yang sama
+                Sama indahnya`
     },
     {
       id: 2,
-      name: "The Small Tall",
-      medium: "Movies",
-      category: "Comedy",
-      year: 2015,
-      watchedOn: null,
-      isFavorite: true
-    }, {
-      id: 3,
-      name: "The Redemption",
-      medium: "Movies",
-      category: "Action",
-      year: 2016,
-      watchedOn: null,
-      isFavorite: false
-    }, {
-      id: 4,
-      name: "Hoopers",
-      medium: "Series",
-      category: "Drama",
-      year: null,
-      watchedOn: null,
-      isFavorite: true
-    }, {
-      id: 5,
-      name: "Happy Joe: Cheery Road",
-      medium: "Movies",
-      category: "Action",
-      year: 2015,
-      watchedOn: 1457166565384,
-      isFavorite: false
+      title: "Don't Let Me Down",
+      artist: "The Chainsmokers",
+      album: "Shape of You",
+      medium: "Rock",
+      timeRelease: "2016-10-05",
+      newRelease:true,
+      lyrics: ``
     }
   ];
 }

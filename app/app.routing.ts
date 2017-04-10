@@ -1,11 +1,11 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { MediaItemFormComponent } from './media-item-form.component';
-import { MediaItemListComponent } from './media-item-list.component';
+import { SongItemFormComponent } from './song-item-form.component';
+import { SongItemListComponent } from './song-item-list.component';
 
 const appRoutes: Routes = [
-  { path: 'add', component: MediaItemFormComponent },
-  { path: ':medium', component: MediaItemListComponent },
+  { path: 'add', component: SongItemFormComponent },
+  { path: ':medium', component: SongItemListComponent },
   { path: '', pathMatch: 'full', redirectTo: 'all' }
 ];
 

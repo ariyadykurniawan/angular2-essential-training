@@ -1,0 +1,8 @@
+<div [hidden]="isVisible()" class="popup">
+  <div class="content">
+      <span class="close" (click)="onPopUpClose()">&times;</span>
+      <h2>Artist: {{ mediaPopUp? mediaPopUp.artist : "" }}</h2>
+      <h2>Title: {{ mediaPopUp? mediaPopUp.title : "" }}</h2>
+      <p>{{ mediaPopUp? mediaPopUp.lyrics : "" }}</p>
+  </div>
+</div>
