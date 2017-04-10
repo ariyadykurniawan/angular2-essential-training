@@ -10,6 +10,5 @@
     "**/*.js": {
       "when": "$(basename).ts"
     }
-  },
-  "vsicons.presets.angular": true
+  }
 }

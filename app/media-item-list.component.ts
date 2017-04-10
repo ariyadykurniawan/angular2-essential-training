@@ -19,6 +19,32 @@ export class MediaItemListComponent {
     this.popUp = null;
   }
 
+  idx=0;
+
+  reset(media1,idx){
+    for(var img of media1.picts){
+        img.selected = false;
+    }
+    media1.picts[idx].selected = true;
+
+  }
+
+  nextImage(media){
+    this.idx +=1;
+    if(this.idx >  media.picts.lengt){
+      this.idx = 0;
+    }
+    this.reset(media,this.idx);
+  }
+
+  prevImage(media){
+    this.idx -=1;
+    if(this.idx < 0){
+      this.idx = 1;
+    }
+    this.reset(media,this.idx);
+  }
+
   mediaItems = [
     {
       id: 1,
@@ -28,7 +54,7 @@ export class MediaItemListComponent {
       year: 2010,
       watchedOn: 1294166565384,
       isFavorite: false,
-      imgs:[{
+      picts:[{
           src:'./media/01.png',
           selected: true
         },
@@ -45,7 +71,7 @@ export class MediaItemListComponent {
       year: 2015,
       watchedOn: null,
       isFavorite: true,
-      imgs:[{
+      picts:[{
           src:'./media/01.png',
           selected: true
         },
@@ -61,7 +87,7 @@ export class MediaItemListComponent {
       year: 2016,
       watchedOn: null,
       isFavorite: false,
-      imgs:[{
+      picts:[{
           src:'./media/01.png',
           selected: true
         },
@@ -77,7 +103,7 @@ export class MediaItemListComponent {
       year: null,
       watchedOn: null,
       isFavorite: true,
-      imgs:[{
+      picts:[{
           src:'./media/01.png',
           selected: true
         },
@@ -93,7 +119,7 @@ export class MediaItemListComponent {
       year: 2015,
       watchedOn: 1457166565384,
       isFavorite: false,
-      imgs:[{
+      picts:[{
           src:'./media/01.png',
           selected: true
         },

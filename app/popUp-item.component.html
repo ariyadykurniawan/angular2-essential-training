@@ -1,7 +1,15 @@
 <div [hidden]="isVisible()" class="popup">
   <div class="content">
       <span class="close" (click)="onPopUpClose()">&times;</span>
-      <mw-media-img>[imgs] = "mediaPopUp.img"</mw-media-img>
+      <template [ngIf]='mediaPopUp'>
+        <div *ngFor="let img of mediaPopUp.picts">
+          <template [ngIf]="img.selected">
+          <img src='{{img.src}}' alt="">
+          </template>
+        </div>
+        <button (click) = "prevImg(mediaPopUp)">prev</button>
+        <button (click) = "nextImg(mediaPopUp)">next</button>
+      </template>
       <h2>Name {{ mediaPopUp? mediaPopUp.name : "" }}</h2>
       <h2>Whatced On {{ mediaPopUp? mediaPopUp.watchedOn : "" }}</h2>
       <h2>Category On {{ mediaPopUp? mediaPopUp.category : "" }}</h2>

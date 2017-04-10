@@ -15,6 +15,7 @@ export class MediaItemComponent {
   }
 
   onPreview(){
+    console.log('media',this.mediaItem);
     this.preview.emit(this.mediaItem);
   }
 }

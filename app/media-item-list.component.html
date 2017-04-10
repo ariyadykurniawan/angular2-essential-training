@@ -6,5 +6,5 @@
     (delete)="onMediaItemDelete($event)" 
     (preview)="onMediaItemPreview($event)"
     ></mw-media-item>
-    <mw-media-popUp [mediaPopUp] = "popUp" (close)="onPopUpClose()"></mw-media-popUp>
+    <mw-media-popUp [mediaPopUp] = "popUp" (close)="onPopUpClose()" (next) = "nextImage($event)" (prev) = "prevImage($event)"></mw-media-popUp>
 </section>
