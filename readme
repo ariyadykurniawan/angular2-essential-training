@@ -1,6 +1,9 @@
-i use bootstrap for css
+I use bootstrap for css, modifiy filter, using medium and new release filter.
+medium will show the song genre, and new release will show song with new release value is true.
+I also use :
 1 mock-xhr-backend
 1 service
 1 routing
 11 component
 1 pipe
+
