@@ -15,17 +15,13 @@ export class MockXHRBackend {
          console.log(request.url);
           if (request.url.indexOf('mediaitems?medium=') >= 0 || request.url === 'mediaitems') {
             var medium;
-            var newRelease;
             if (request.url.indexOf('?') >= 0) {
               medium = request.url.split('=')[1];
               if (medium === 'undefined') medium = '';
             }
 
-            
-
             var mediaItems;
             if (medium) {
-              //console.log("medium "+medium);
               if(medium === "newrelease"){
                 console.log(medium);
                 mediaItems = this._mediaItems.filter(mediaItem => mediaItem.newRelease === true);
