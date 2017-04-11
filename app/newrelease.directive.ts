@@ -4,5 +4,5 @@ import { Directive, HostBinding, HostListener, Input } from '@angular/core';
   selector: '[mwNewRelease]'
 })
 export class NewReleaseDirective {
-  @HostBinding('class.panel panel-success') isFavorite = true;
+  @HostBinding('class.panel panel-success') newRelease = true;
 }

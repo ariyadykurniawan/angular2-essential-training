@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { MediaItemComponent } from './media-item.component';
 import { SongItemListComponent } from './song-item-list.component';
 import { NewReleaseDirective } from './newrelease.directive';
-import { CategoryListPipe } from './category-list.pipe';
+import { ArtistListPipe } from './artist-list.pipe';
 import { SongItemFormComponent } from './song-item-form.component';
 import { MediaItemService } from './media-item.service';
 import { lookupListToken, lookupLists } from './providers';
@@ -27,7 +27,7 @@ import { PopUpItemComponent } from './popup-item.component';
     MediaItemComponent,
     SongItemListComponent,
     NewReleaseDirective,
-    CategoryListPipe,
+    ArtistListPipe,
     SongItemFormComponent,
     PopUpItemComponent
   ],
