@@ -18,19 +18,23 @@ export class MockXHRBackend {
             var newRelease;
             if (request.url.indexOf('?') >= 0) {
               medium = request.url.split('=')[1];
-              // if (medium === 'undefined') medium = '';
-              if(medium === 'undefined'){
-                medium = '';
-              }else if(medium === 'new'){
-                newRelease = true;
-              }
+              if (medium === 'undefined') medium = '';
             }
+
+            
+
             var mediaItems;
             if (medium) {
-              mediaItems = this._mediaItems.filter(mediaItem => mediaItem.medium === medium);
-            }else if(newRelease){
-              mediaItems = this._mediaItems.filter(mediaItem => mediaItem.newRelease === newRelease);
-            } else {
+              //console.log("medium "+medium);
+              if(medium === "newrelease"){
+                console.log(medium);
+                mediaItems = this._mediaItems.filter(mediaItem => mediaItem.newRelease === true);
+              }
+              else{
+                mediaItems = this._mediaItems.filter(mediaItem => mediaItem.medium === medium);
+              }
+              
+            }else {
               mediaItems = this._mediaItems;
             }
 

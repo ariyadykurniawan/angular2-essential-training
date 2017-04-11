@@ -30,13 +30,9 @@ export class SongItemListComponent {
     this.paramsSubscription = this.activatedRoute.params
       .subscribe(params => {
         let medium = params['medium'];
-
         if(medium.toLowerCase() === 'all') {
           medium = '';
-        }else if(medium.toLowerCase() === 'new'){
-          medium = true;
         }
-
         this.getMediaItems(medium);
       });
   }

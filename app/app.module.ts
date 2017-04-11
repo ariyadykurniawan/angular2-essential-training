@@ -6,7 +6,6 @@ import { HttpModule, XHRBackend } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MediaItemComponent } from './media-item.component';
 import { SongItemListComponent } from './song-item-list.component';
-import { NewReleaseDirective } from './newrelease.directive';
 import { ArtistListPipe } from './artist-list.pipe';
 import { SongItemFormComponent } from './song-item-form.component';
 import { MediaItemService } from './media-item.service';
@@ -26,7 +25,6 @@ import { PopUpItemComponent } from './popup-item.component';
     AppComponent,
     MediaItemComponent,
     SongItemListComponent,
-    NewReleaseDirective,
     ArtistListPipe,
     SongItemFormComponent,
     PopUpItemComponent
